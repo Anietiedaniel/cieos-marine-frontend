@@ -1,11 +1,11 @@
-import StatCard from "../../../components/cards/StatCard";
-import CertificationCard from "../../../components/cards/CertificationCard";
-import AssignmentCard from "../../../components/cards/AssignmentCard";
-import CountdownCard from "../../../components/cards/CountdownCard";
-import AssetPerformanceCard from "../../../components/cards/AssetPerformanceCard";
-import ProjectStatusCard from "../../../components/cards/ProjectStatusCard";
-import RecentCommentsCard from "../../../components/cards/RecentCommentsCard";
-import UpcomingSchedulesCard from "../../../components/cards/UpcomingSchedulesCard";
+import StatCard from "../../../components/overviewComponents/cards/StatCard";
+import CertificationCard from "../../../components/overviewComponents/cards/CertificationCard";
+import AssignmentCard from "../../../components/overviewComponents/cards/AssignmentCard";
+import CountdownCard from "../../../components/overviewComponents/cards/CountdownCard";
+import AssetPerformanceCard from "../../../components/overviewComponents/cards/AssetPerformanceCard";
+import ProjectStatusCard from "../../../components/overviewComponents/cards/ProjectStatusCard";
+import RecentCommentsCard from "../../../components/overviewComponents/cards/RecentCommentsCard";
+import UpcomingSchedulesCard from "../../../components/overviewComponents/cards/UpcomingSchedulesCard";
 
 export default function Overview() {
   return (

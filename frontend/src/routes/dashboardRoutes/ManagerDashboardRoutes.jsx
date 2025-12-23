@@ -1,6 +1,6 @@
 import Overview from "../../dashboards/managerdashboard/tabs/Overview";
 
-import NewWorkOrder from "../../dashboards/managerdashboard/workordersubs/NewWorkOrder";
+import NewWorkOrder from "../../dashboards/managerdashboard/workorderbranches/NewWorkOrder";
 // import Assets from "../../dashboards/managerdashboard/tabs/Assets";
 
 const dashboardRoutes = [
