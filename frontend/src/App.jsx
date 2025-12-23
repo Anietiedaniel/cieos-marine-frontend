@@ -1,12 +1,13 @@
-import DashboardLayout from "./components/layout/DashboardLayout.jsx";
-import Overview from "./dashboards/managerdashboard/tabs/Overview.jsx";
+import React from "react";
+import Sidebar from "./dashboards/managerdashboard/sidebar.jsx";
 
 function App() {
+
   return (
-    <DashboardLayout>
-      <Overview />
-    </DashboardLayout>
-  );
+    <>
+     <Sidebar />
+    </>
+  )
 }
 
 export default App;
