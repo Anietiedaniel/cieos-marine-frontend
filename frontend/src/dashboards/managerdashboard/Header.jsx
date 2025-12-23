@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 
-export default function Header({ onMenuClick }) {
+export default function Header({ onMenuClick, isSidebarOpen }) {
   return (
-    <header className="w-full h-[64px] bg-white border-b flex items-center px-4 md:px-6 sticky top-0 z-10">
+    <header className="w-full h-[64px] bg-white border-b flex items-center px-4 md:px-6 sticky top-0 z-30">
       
       {/* LEFT */}
       <div className="flex items-center gap-3 min-w-fit">
@@ -13,7 +13,11 @@ export default function Header({ onMenuClick }) {
           onClick={onMenuClick}
           className="md:hidden text-gray-700 mr-2"
         >
-          <i className="fa-solid fa-bars text-lg"></i>
+          <i
+            className={`fa-solid ${
+              isSidebarOpen ? "fa-xmark" : "fa-bars"
+            } text-lg`}
+          />
         </button>
 
         <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
@@ -43,7 +47,7 @@ export default function Header({ onMenuClick }) {
       {/* RIGHT */}
       <div className="flex items-center gap-4 ml-auto">
 
-        {/* QUICK ACTIONS (HIDE ON MOBILE) */}
+        {/* QUICK ACTIONS */}
         <button className="hidden md:flex bg-[#6C8E3F] text-white px-4 py-2.5 rounded-lg text-sm font-medium">
           Quick Actions
         </button>

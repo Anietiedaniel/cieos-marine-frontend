@@ -1,15 +1,24 @@
-import Sidebar from "../../dashboards/managerdashboard/sidebar.jsx";
+import { useState } from "react";
+import Sidebar from "../../dashboards/managerdashboard/sidebar";
+import Header from "../../dashboards/managerdashboard/Header";
 
 export default function DashboardLayout({ children }) {
-  return (
-    <div className="flex min-h-screen bg-gray-100">
-      {/* Sidebar */}
-      <Sidebar />
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-      {/* Main content */}
-      <main className="flex-1 overflow-y-auto">
-        {children}
-      </main>
+  return (
+    <div className="h-screen flex flex-col bg-gray-100">
+      <Header
+        onMenuClick={() => setSidebarOpen(!sidebarOpen)}
+        isSidebarOpen={sidebarOpen}
+      />
+
+      <div className="flex flex-1 overflow-hidden">
+        <Sidebar isOpen={sidebarOpen} />
+
+        <main className="flex-1 overflow-y-auto p-6">
+          {children}
+        </main>
+      </div>
     </div>
   );
 }
