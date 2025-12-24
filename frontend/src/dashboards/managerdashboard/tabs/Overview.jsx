@@ -11,24 +11,38 @@ export default function Overview() {
   return (
     <div className="p-6 bg-gray-100 min-h-screen space-y-6">
 
-      {/* HEADER */}
-      <div className="flex justify-between items-start">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-800">Dashboard Overview</h1>
-          <p className="text-sm text-gray-500 mt-1">
-            Hello there! Here’s an overview of your operations
-          </p>
-        </div>
+{/* HEADER */}
+<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+  
+  {/* Title & Subtitle Group */}
+  <div className="flex flex-col min-w-0">
+    <div className="flex items-center gap-2">
+      {/* Blue Dot Indicator */}
+      <span className="h-2 w-2 rounded-full bg-blue-600 shrink-0"></span>
 
-        <div className="flex gap-3">
-          <button className="border px-4 py-2 rounded-md text-sm bg-white">
-            Customize widget
-          </button>
-          <button className="border px-4 py-2 rounded-md text-sm bg-white">
-            Export Data
-          </button>
-        </div>
-      </div>
+      <h1 className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+        Dashboard Overview
+      </h1>
+    </div>
+
+    <p className="text-sm text-gray-500 mt-1 leading-snug">
+      Hello there! Here’s an overview of your operations
+    </p>
+  </div>
+
+  {/* Actions - Stretches on mobile, compact on desktop */}
+  <div className="flex gap-2 w-full sm:w-auto">
+    <button className="flex-1 sm:flex-none border border-gray-200 px-4 py-2 rounded-lg text-sm font-medium bg-white hover:bg-gray-50 transition shadow-sm">
+      Customize
+    </button>
+
+    <button className="flex-1 sm:flex-none bg-[#708B53] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition shadow-sm">
+      Export Data
+    </button>
+  </div>
+
+</div>
+
 
       {/* ROW 1 */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

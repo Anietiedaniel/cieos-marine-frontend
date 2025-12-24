@@ -1,4 +1,9 @@
+import React from 'react';
+import { useOutletContext } from "react-router-dom"; 
+
 export default function RecentCommentsCard() {
+  const { setShowNotifications } = useOutletContext();
+
   const comments = Array(3).fill({
     user: "John Hanks",
     issue: "issue-001",
@@ -10,8 +15,14 @@ export default function RecentCommentsCard() {
     <div className="bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold text-gray-800">Recent Comments</h3>
-        <button className="text-green-700 text-xs font-semibold hover:underline">See more</button>
+        <button 
+          onClick={() => setShowNotifications(true)} 
+          className="text-green-700 text-xs font-semibold hover:underline"
+        >
+          See more
+        </button>
       </div>
+
       <div className="space-y-4">
         {comments.map((comment, i) => (
           <div key={i} className="flex gap-3">
