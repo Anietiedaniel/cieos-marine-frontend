@@ -1,4 +1,4 @@
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 const data = [
   { name: "Inspection", value: 40, color: "#6E8B3D" },
@@ -8,24 +8,29 @@ const data = [
 
 export default function DonutChart() {
   return (
-    <div className="relative">
-      <PieChart width={180} height={180}>
-        <Pie
-          data={data}
-          innerRadius={60}
-          outerRadius={80}
-          dataKey="value"
-        >
-          {data.map((entry, index) => (
-            <Cell key={index} fill={entry.color} />
-          ))}
-        </Pie>
-      </PieChart>
+    /* Set a height for the container so ResponsiveContainer knows how big to be */
+    <div className="relative w-full h-[200px] md:h-[180px]">
+      <ResponsiveContainer width="100%" height="100%">
+        <PieChart>
+          <Pie
+            data={data}
+            innerRadius="70%"
+            outerRadius="90%"
+            paddingAngle={2}
+            dataKey="value"
+            stroke="none"
+          >
+            {data.map((entry, index) => (
+              <Cell key={index} fill={entry.color} />
+            ))}
+          </Pie>
+        </PieChart>
+      </ResponsiveContainer>
 
-      {/* CENTER TEXT */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-2xl items-center  font-bold text-gray-800">80</span>
-        <span className="text-xs text-gray-500">Total</span>
+      {/* CENTER TEXT - Absolutely centered within the Relative parent */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <span className="text-3xl font-bold text-gray-800 leading-none">80</span>
+        <span className="text-[10px] uppercase tracking-wider text-gray-500 font-medium">Total</span>
       </div>
     </div>
   );

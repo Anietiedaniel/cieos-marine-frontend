@@ -1,19 +1,19 @@
 import { NavLink } from "react-router-dom";
 
 const menuItems = [
-  { label: "Overview", icon: "fa-table-cells-large", path: "/overview" },
-  { label: "Work Orders", icon: "fa-file", path: "/work-orders" },
-  { label: "Assets", icon: "fa-cube", path: "/assets" },
-  { label: "Preventive Maintenance", icon: "fa-calendar", path: "/maintenance" },
-  { label: "Issues", icon: "fa-triangle-exclamation", path: "/issues" },
-  { label: "Reminders", icon: "fa-clock", path: "/reminders" },
-  { label: "Inspections", icon: "fa-clipboard-check", path: "/inspections" },
-  { label: "Inventory", icon: "fa-boxes-stacked", path: "/inventory" },
-  { label: "Documents", icon: "fa-file-lines", path: "/documents" },
-  { label: "Operations", icon: "fa-wrench", path: "/operations" },
-  { label: "Teams", icon: "fa-users", path: "/teams" },
-  { label: "Reports", icon: "fa-chart-column", path: "/reports" },
-  { label: "Settings", icon: "fa-gear", path: "/settings" },
+  { label: "Overview", icon: "fa-table-cells-large", path: "overview" },
+  { label: "Work Orders", icon: "fa-file", path: "work-orders" }, 
+  { label: "Assets", icon: "fa-cube", path: "assets" },
+  { label: "Preventive Maintenance", icon: "fa-calendar", path: "maintenance" },
+  { label: "Issues", icon: "fa-triangle-exclamation", path: "issues" },
+  { label: "Reminders", icon: "fa-clock", path: "reminders" },
+  { label: "Inspections", icon: "fa-clipboard-check", path: "inspections" },
+  { label: "Inventory", icon: "fa-boxes-stacked", path: "inventory" },
+  { label: "Documents", icon: "fa-file-lines", path: "documents" },
+  { label: "Operations", icon: "fa-wrench", path: "operations" },
+  { label: "Teams", icon: "fa-users", path: "teams" },
+  { label: "Reports", icon: "fa-chart-column", path: "reports" },
+  { label: "Settings", icon: "fa-gear", path: "settings" },
 ];
 
 export default function Sidebar({ isOpen = false, onClose }) {

@@ -1,7 +1,10 @@
 import Overview from "../../dashboards/managerdashboard/tabs/Overview";
 
-import NewWorkOrder from "../../dashboards/managerdashboard/workorderbranches/NewWorkOrder";
+import NewWorkOrder from "../../dashboards/managerdashboard/workordersubs/NewWorkOrder";
 // import Assets from "../../dashboards/managerdashboard/tabs/Assets";
+
+import WorkOrderPage from "../../dashboards/managerdashboard/workordersubs/WorkOrderPage"; 
+
 
 const dashboardRoutes = [
   {
@@ -9,13 +12,9 @@ const dashboardRoutes = [
     element: <Overview />,
   },
   {
-    path: "work-orders",
-    element: <NewWorkOrder />,
+    path: "work-orders", 
+    element: <WorkOrderPage />,
   },
-  // {
-  //   path: "assets",
-  //   element: <Assets />,
-  // },
 ];
 
 export default dashboardRoutes;

@@ -1,4 +1,10 @@
+import { useNavigate } from "react-router-dom"
+
+
 export default function UnscheduledPanel() {
+
+const navigate = useNavigate()
+
   return (
     <div className="p-6 h-full flex flex-col justify-between">
       
@@ -17,7 +23,7 @@ export default function UnscheduledPanel() {
         </div>
       </div>
 
-      <button className="bg-[#6C8E3F] text-white py-2 rounded-lg text-sm font-medium">
+      <button className="bg-[#6C8E3F] text-white py-2 rounded-lg text-sm font-medium" onClick={()=> {navigate('/work-orders')}}>
         Create work order
       </button>
 

@@ -6,8 +6,6 @@ export default function PageSection({ title, children }) {
           {title}
         </h1>
       )}
-
-      {/* THIS IS THE MOST IMPORTANT PART */}
       {children}
     </div>
   );
