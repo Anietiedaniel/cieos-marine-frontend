@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Header from "../../dashboards/managerdashboard/Header";
-import Sidebar from "../../dashboards/managerdashboard/Sidebar";
+import Sidebar from "../../dashboards/managerdashboard/sidebar";
 import NotificationPage from "../../dashboards/managerdashboard/tabs/OverviewSub/NotificationPage";
 
 export default function DashboardLayout() {

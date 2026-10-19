@@ -1,8 +1,10 @@
 import React from 'react';
 import { useOutletContext } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 export default function RecentCommentsCard() {
   const { setShowNotifications } = useOutletContext();
+  const navigate = useNavigate();
 
   const comments = Array(3).fill({
     user: "John Hanks",
@@ -16,7 +18,7 @@ export default function RecentCommentsCard() {
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-bold text-gray-800">Recent Comments</h3>
         <button 
-          onClick={() => setShowNotifications(true)} 
+          onClick={() => navigate("/dashboard/chat")}
           className="text-green-700 text-xs font-semibold hover:underline"
         >
           See more
